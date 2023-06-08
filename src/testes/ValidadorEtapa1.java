@@ -1,8 +1,5 @@
 package testes;
-import Data;
-import Endereco;
-import Loja;
-import Produto;
+import classes.*;
 
 public class ValidadorEtapa1 {
 
