@@ -1,3 +1,4 @@
+package classes;
 public class Loja {
     String nome;
     int quantidadeFuncionarios;

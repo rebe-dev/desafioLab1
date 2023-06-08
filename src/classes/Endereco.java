@@ -1,3 +1,4 @@
+package classes;
 public class Endereco {
     String nomeDaRua;
     String cidade;
