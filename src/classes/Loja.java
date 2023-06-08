@@ -59,7 +59,7 @@ public class Loja {
     }
 
     public String toString(){
-        return "A loja " + this.nome + " tem " + this.quantidaDeFuncionarios + " com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataDeFundacao + " e esta localizada em " + this.endereco;
+        return "A loja " + this.nome + " tem " + this.quantidaDeFuncionarios + "duncionarios com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataDeFundacao + " e esta localizada em " + this.endereco;
     }
 
     public double gastosComSalario(){

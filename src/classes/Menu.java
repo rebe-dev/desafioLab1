@@ -47,6 +47,10 @@ public class Menu {
 
         Produto novoProduto = new Produto(nomeProduto, preco, dataDeValidade);
         System.out.println("\nProduto criado com sucesso!");
+
+        if(novoProduto.estaVencido(new Data(20, 10, 2023))) {
+            System.out.println("PRODUTO VENCIDO");
+        }else System.out.println("PRODUTO NÃO VENCIDO");
     }
 
 }

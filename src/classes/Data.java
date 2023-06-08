@@ -64,12 +64,12 @@ public class Data {
         else return false;
     }
 
-    public void DataValida(int dia, int mes, int ano){
+    private void DataValida(int dia, int mes, int ano){
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
     }
-    public void DataInvalida(){
+    private void DataInvalida(){
         System.out.println("Erro! Data invalida.");
         this.dia = 1;
         this.mes = 1;
