@@ -70,7 +70,7 @@ public class Data {
         this.ano = ano;
     }
     public void DataInvalida(){
-        System.out.println("Erro! Data invalido.");
+        System.out.println("Erro! Data invalida.");
         this.dia = 1;
         this.mes = 1;
         this.ano = 2000;

@@ -1,23 +1,23 @@
 package classes;
 public class Loja {
     String nome;
-    int quantidadeFuncionarios;
-    float salarioBaseFuncionario;
+    int quantidaDeFuncionarios;
+    double salarioBaseFuncionario;
     Endereco endereco;
     Data dataDeFundacao;
 
     // construtores
 
-    public Loja(String nome, int quantidadeFuncionarios, float salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao){
+    public Loja(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao){
         this.nome = nome;
-        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.quantidaDeFuncionarios = quantidaDeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         this.endereco = endereco;
         this.dataDeFundacao = dataDeFundacao;
     }
-    public Loja(String nome, int quantidadeFuncionarios){
+    public Loja(String nome, int quantidaDeFuncionarios){
         this.nome = nome;
-        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.quantidaDeFuncionarios = quantidaDeFuncionarios;
         this.salarioBaseFuncionario = -1;
     }
 
@@ -31,13 +31,13 @@ public class Loja {
     }
 
     public int getQuantidadeFuncionarios() {
-        return quantidadeFuncionarios;
+        return quantidaDeFuncionarios;
     }
-    public void setQuantidadeFuncionarios(int quantidadeFuncionarios) {
-        this.quantidadeFuncionarios = quantidadeFuncionarios;
+    public void setQuantidadeFuncionarios(int quantidaDeFuncionarios) {
+        this.quantidaDeFuncionarios = quantidaDeFuncionarios;
     }
 
-    public float getSalarioBaseFuncionario() {
+    public double getSalarioBaseFuncionario() {
         return salarioBaseFuncionario;
     }
     public void setSalarioBaseFuncionario(float salarioBaseFuncionario) {
@@ -59,21 +59,21 @@ public class Loja {
     }
 
     public String toString(){
-        return "A loja" + this.nome + "tem" + this.quantidadeFuncionarios + "com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataDeFundacao + "e esta localizada em " + this.endereco;
+        return "A loja " + this.nome + " tem " + this.quantidaDeFuncionarios + " com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataDeFundacao + " e esta localizada em " + this.endereco;
     }
 
-    public float gastosComSalario(){
+    public double gastosComSalario(){
         if(this.salarioBaseFuncionario == -1) {
             return -1;
         } else {
-            return this.quantidadeFuncionarios * this.salarioBaseFuncionario;
+            return this.quantidaDeFuncionarios * this.salarioBaseFuncionario;
         }
     };
 
     public char tamanhoDaLoja(){
-        if(this.quantidadeFuncionarios < 10){
+        if(this.quantidaDeFuncionarios < 10){
            return 'P';
-        }else if(this.quantidadeFuncionarios >= 10 && this.quantidadeFuncionarios <= 30){
+        }else if(this.quantidaDeFuncionarios >= 10 && this.quantidaDeFuncionarios <= 30){
           return 'M';
         } else {
             return 'G';

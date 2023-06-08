@@ -69,8 +69,8 @@ public class Endereco {
 
     public String toString(){
         return (
-            "Rua" + this.nomeDaRua + "," + this.numero + "," + this.complemento + "\n" + 
-            this.cidade + "-" + this.estado + "\n" +
+            "Rua " + this.nomeDaRua + ", " + this.numero + ", " + this.complemento + "\n" + 
+            this.cidade + " - " + this.estado + "\n" +
             this.pais + "\n" +
             this.cep
         );
