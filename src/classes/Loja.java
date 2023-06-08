@@ -2,6 +2,8 @@ public class Loja {
     String nome;
     int quantidadeFuncionarios;
     float salarioBaseFuncionario;
+    Endereco endereco;
+    Data dataDeFundacao;
 
     // construtores
 
@@ -37,6 +39,20 @@ public class Loja {
     }
     public void setSalarioBaseFuncionario(float salarioBaseFuncionario) {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Data getDataDeFundacao() {
+        return dataDeFundacao;
+    }
+    public void setDataDeFundacao(Data dataDeFundacao) {
+        this.dataDeFundacao = dataDeFundacao;
     }
 
     public String toString(){
