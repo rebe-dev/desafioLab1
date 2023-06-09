@@ -2,12 +2,12 @@ package classes;
 public class Produto {
     String nome;
     double preco;
-    Data dataDeValidade;
+    Data dataValidade;
 
-    public Produto(String nome, double preco, Data dataDeValidade){
+    public Produto(String nome, double preco, Data dataValidade){
         this.nome = nome;
         this.preco = preco;
-        this.dataDeValidade = dataDeValidade;
+        this.dataValidade = dataValidade;
     };
 
     public String getNome() {
@@ -24,21 +24,21 @@ public class Produto {
         this.preco = preco;
     };
 
-    public Data getDataDeValidade() {
-        return dataDeValidade;
+    public Data getDataValidade() {
+        return dataValidade;
     }
-    public void setDataDeValidade(Data dataDeValidade) {
-        this.dataDeValidade = dataDeValidade;
+    public void setDataValidade(Data dataValidade) {
+        this.dataValidade = dataValidade;
     }
 
     public String toString(){
-        return "O Produto" + this.nome + "possui o preço" + this.preco + "e data de validade " + this.dataDeValidade;
+        return "O Produto" + this.nome + "possui o preço" + this.preco + "e data de validade " + this.dataValidade;
     };
 
     public boolean estaVencido(Data data){
-        if(data.ano > this.dataDeValidade.ano){
+        if(data.ano > this.dataValidade.ano){
             return true;
-        } else if(data.ano == this.dataDeValidade.ano && data.mes >= this.dataDeValidade.mes && data.dia >= this.dataDeValidade.dia){
+        } else if(data.ano == this.dataValidade.ano && data.mes >= this.dataValidade.mes && data.dia >= this.dataValidade.dia){
             return true;
         } else{
             return false;

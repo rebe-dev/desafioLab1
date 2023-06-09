@@ -4,20 +4,22 @@ public class Loja {
     int quantidaDeFuncionarios;
     double salarioBaseFuncionario;
     Endereco endereco;
-    Data dataDeFundacao;
+    Data dataFundacao;
 
     // construtores
 
-    public Loja(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao){
+    public Loja(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao){
         this.nome = nome;
         this.quantidaDeFuncionarios = quantidaDeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         this.endereco = endereco;
-        this.dataDeFundacao = dataDeFundacao;
+        this.dataFundacao = dataFundacao;
     }
-    public Loja(String nome, int quantidaDeFuncionarios){
+    public Loja(String nome, int quantidaDeFuncionarios, Endereco endereco, Data dataFundacao){
         this.nome = nome;
         this.quantidaDeFuncionarios = quantidaDeFuncionarios;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
         this.salarioBaseFuncionario = -1;
     }
 
@@ -44,22 +46,23 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-
-    public Data getDataDeFundacao() {
-        return dataDeFundacao;
+    public Endereco getEndereco() {
+        return this.endereco;
     }
-    public void setDataDeFundacao(Data dataDeFundacao) {
-        this.dataDeFundacao = dataDeFundacao;
+   
+
+    public Data getDataFundacao() {
+        return dataFundacao;
+    }
+    public void setDataFundacao(Data dataFundacao) {
+        this.dataFundacao = dataFundacao;
     }
 
     public String toString(){
-        return "A loja " + this.nome + " tem " + this.quantidaDeFuncionarios + "duncionarios com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataDeFundacao + " e esta localizada em " + this.endereco;
+        return "A loja " + this.nome + " tem " + this.quantidaDeFuncionarios + " funcionarios com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataFundacao + " e esta localizada em " + this.endereco;
     }
 
     public double gastosComSalario(){

@@ -24,7 +24,7 @@ public class Menu {
         String numero = Teclado.leString("Numero:");
         String complemento = Teclado.leString("Complmento:");
         Endereco enderecoLojaNova = new Endereco(nomeDaRua, cidade, estado, pais, cep, numero, complemento);
-
+        
         System.out.println("Qual a data de fundação da loja?");
         int dia = Teclado.leInt("Dia");
         int mes = Teclado.leInt("Mês:");
@@ -32,7 +32,7 @@ public class Menu {
         Data dataDeFundacaoNovaLoja = new Data(dia, mes, ano);
 
         Loja novaLoja = new Loja(nomeLoja, quantidaDeFuncionarios, salarioBaseFuncionario, enderecoLojaNova, dataDeFundacaoNovaLoja);
-        System.out.println("\nLoja criada: " + novaLoja);
+        System.out.println("\nLoja criada!\n" + novaLoja);
     }
 
     private void novoProduto(){
