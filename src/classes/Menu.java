@@ -3,14 +3,14 @@ package classes;
 public class Menu {
     int opcaoEscolhida;
    
-    public Menu(int opcaoEscolhida){
+    public Menu(int opcaoEscolhida) {
         this.opcaoEscolhida = opcaoEscolhida;
 
         if(this.opcaoEscolhida == 1) this.novaLoja();
         else this.novoProduto();
     }
 
-    private void novaLoja(){
+    private void novaLoja() {
         String nomeLoja = Teclado.leString("\nNome da Loja:");
         int quantidaDeFuncionarios = Teclado.leInt("Quantidade de funcionarios:");
         double salarioBaseFuncionario = Teclado.leDouble("Qual o salario base dos funcionarios:");
@@ -35,7 +35,7 @@ public class Menu {
         System.out.println("\nLoja criada!\n" + novaLoja);
     }
 
-    private void novoProduto(){
+    private void novoProduto() {
         String nomeProduto = Teclado.leString("\nNome do Produto:");
         Double preco = Teclado.leDouble("Preço do Produto:");
 

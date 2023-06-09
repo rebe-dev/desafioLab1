@@ -1,14 +1,12 @@
 package classes.lojas;
 
-import classes.Data;
-import classes.Endereco;
-import classes.Loja;
+import classes.*;
 
 public class Informatica extends Loja {
     double seguroEletronicos;
 
-    public Informatica(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos){
-        super(nome, quantidaDeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
+    public Informatica(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos, int quantMaximaProdutos){
+        super(nome, quantidaDeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, quantMaximaProdutos);
         this.seguroEletronicos = seguroEletronicos;
     }
 
@@ -20,6 +18,8 @@ public class Informatica extends Loja {
     }
 
     public String toString(){
-        return "A loja de eletronicos " + this.nome + " com seguro de lojas eletronicas de  " + this.seguroEletronicos + " com " + this.quantidaDeFuncionarios + " funcionarios com salario base de " + this.salarioBaseFuncionario + ". Foi fundada em " + this.dataFundacao + " e esta localizada em " + this.endereco;
+        return "A loja de eletronicos " + this.nome + " com seguro de lojas eletronicas de  " + this.seguroEletronicos + " com " + this.quantidaDeFuncionarios + 
+        " funcionarios com salario base de " + this.salarioBaseFuncionario  + " e estoque de produtos de " + estoqueProdutos +
+        ". Foi fundada em " + this.dataFundacao + " e esta localizada em " + this.endereco;
     }
 }

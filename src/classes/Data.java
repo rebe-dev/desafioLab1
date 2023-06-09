@@ -4,16 +4,16 @@ public class Data {
     int mes;
     int ano;
     
-    public Data(int dia, int mes, int ano){
+    public Data(int dia, int mes, int ano) {
         int[] mesesCom31Dias = {1, 3, 5, 7, 8, 10, 12};
         int[] mesesCom30Dias = {4, 6, 9, 11};
 
-        if(dia >= 1 && dia <= 31){
-            if(mes >= 1 && mes <= 12){
+        if(dia >= 1 && dia <= 31) {
+            if(mes >= 1 && mes <= 12) {
                 if(mes == 2) {
                     if(!(ano % 4 == 0) && dia > 28) {
                         this.DataInvalida();
-                    } else if(dia <= 29){
+                    } else if(dia <= 29) {
                         this.DataValida(dia, mes, ano);
                     }
                 } else {
@@ -55,21 +55,21 @@ public class Data {
         this.ano = ano;
     }
 
-    public String toString(){
+    public String toString() {
         return  this.dia + "/" + this.mes + "/" + this.ano;
     };
 
-    public boolean verificaAnoBissexto(){
+    public boolean verificaAnoBissexto() {
         if(this.ano % 4 == 0) return true;
         else return false;
     }
 
-    private void DataValida(int dia, int mes, int ano){
+    private void DataValida(int dia, int mes, int ano) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
     }
-    private void DataInvalida(){
+    private void DataInvalida() {
         System.out.println("Erro! Data invalida.");
         this.dia = 1;
         this.mes = 1;

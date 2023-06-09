@@ -8,7 +8,7 @@ public class Endereco {
     String numero;
     String complemento;
 
-    public Endereco(String nomeDaRua, String cidade, String estado, String pais, String cep, String numero, String complemento){
+    public Endereco(String nomeDaRua, String cidade, String estado, String pais, String cep, String numero, String complemento) {
         this.nomeDaRua = nomeDaRua;
         this.cidade = cidade;
         this.estado = estado;
@@ -67,7 +67,7 @@ public class Endereco {
         this.complemento = complemento;
     };
 
-    public String toString(){
+    public String toString() {
         return (
             "Rua " + this.nomeDaRua + ", " + this.numero + ", " + this.complemento + "\n" + 
             this.cidade + " - " + this.estado + "\n" +
