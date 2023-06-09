@@ -25,3 +25,6 @@ Neste contexto, para o desafio de Laboratório I você deverá desenvolver um Ge
 
 Um Shopping pode ter diversas lojas de diferentes segmentos (vestuário, alimentação, lazer, cinema, serviços etc.). Desta forma, você deverá implementar um sistema que gerencie as lojas presentes no shopping, bem como alterações nas lojas, emissões de relatórios e diversos outros aspectos referentes ao assunto.
 
+## Bugs
+
+- valor da loja2 não esta sendo usado nos testes;
