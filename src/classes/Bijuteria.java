@@ -3,9 +3,9 @@ package classes;
 public class Bijuteria extends Loja {
     double metaVendas;
 
-    public Bijuteria(Double metaVendas, String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao){
+    public Bijuteria(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int i){
         super(nome, quantidaDeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
-        this.metaVendas = metaVendas;
+        this.metaVendas = i;
     }
 
     public double getMetaVendas() {

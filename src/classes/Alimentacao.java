@@ -3,7 +3,7 @@ package classes;
 public class Alimentacao extends Loja {
     Data dataAlvara;
 
-    public Alimentacao(Data dataAlvara, String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao){
+    public Alimentacao(String nome, int quantidaDeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Data dataAlvara){
         super(nome, quantidaDeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
         this.dataAlvara = dataAlvara;
     }
