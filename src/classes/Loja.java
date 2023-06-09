@@ -1,10 +1,10 @@
 package classes;
 public class Loja {
-    String nome;
-    int quantidaDeFuncionarios;
-    double salarioBaseFuncionario;
-    Endereco endereco;
-    Data dataFundacao;
+    protected String nome;
+    protected int quantidaDeFuncionarios;
+    protected double salarioBaseFuncionario;
+    protected Endereco endereco;
+    protected Data dataFundacao;
 
     // construtores
 

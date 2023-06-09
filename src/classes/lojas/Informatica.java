@@ -1,4 +1,8 @@
-package classes;
+package classes.lojas;
+
+import classes.Data;
+import classes.Endereco;
+import classes.Loja;
 
 public class Informatica extends Loja {
     double seguroEletronicos;

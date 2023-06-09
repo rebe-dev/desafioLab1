@@ -1,5 +1,7 @@
 package testes;
 import classes.*;
+import classes.lojas.*;
+
 
 public class ValidadorEtapa3 {
 
