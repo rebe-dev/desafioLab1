@@ -1,5 +1,10 @@
 package testes;
 import classes.*;
+import classes.lojas.Alimentacao;
+import classes.lojas.Bijuteria;
+import classes.lojas.Cosmetico;
+import classes.lojas.Informatica;
+import classes.lojas.Vestuario;
 
 public class ValidadorEtapa3 {
 
