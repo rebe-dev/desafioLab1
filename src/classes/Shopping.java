@@ -1,8 +1,7 @@
 package classes;
-
-import java.util.ArrayList;
+import java.sql.Types;
 import java.util.Arrays;
-import java.util.List;
+import classes.lojas.*;
 
 public class Shopping {
     String nome;
@@ -59,4 +58,51 @@ public class Shopping {
             return false;
         }
     }
+
+    public boolean removeLoja(String lojaParaRemover){
+        for(int i = 0; i < this.lojas.length; i++) {
+            if(lojas[i].getNome().equals(lojaParaRemover)){
+                lojas[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Informatica lojaSeguroMaisCaro(){
+        Informatica lojaComSeguroMaisCaro = null;
+
+        for(int i = 0; i < this.lojas.length; i++) {
+            if(this.lojas[i] instanceof Informatica){
+                if(lojaComSeguroMaisCaro.getSeguroEletronicos() > ((Informatica)this.lojas[i]).getSeguroEletronicos()) {
+                    lojaComSeguroMaisCaro = ((Informatica)this.lojas[i]);
+                };
+            }
+        }
+        return lojaComSeguroMaisCaro;
+    }
+
+    public int quantidadeLojasPorTipo(String tipo) {
+        String[] tiposDeLoja = {"Cosmetico", "Vestuario", "Bijuteria", "Alimentacao", "Informatica"};
+        int[] tiposDeLojaContador = {0,0,0,0,0};
+        int posicaoDoTipoLoja = 0;
+
+        // pega qual a posição no array tiposDeLojaContador o parametro tipo está 
+        for(int i = 0; i < tiposDeLoja.length; i++) {
+            if(tiposDeLoja[i].equalsIgnoreCase(tipo)){
+                posicaoDoTipoLoja = i;
+                // contador de instancias de cada tipo de loja nas lojas
+                for(int x = 0; x < this.lojas.length; x++) {
+                    if(this.lojas[x] instanceof Cosmetico) tiposDeLojaContador[0]++;
+                    if(this.lojas[x] instanceof Vestuario) tiposDeLojaContador[1]++;
+                    if(this.lojas[x] instanceof Bijuteria) tiposDeLojaContador[2]++;
+                    if(this.lojas[x] instanceof Alimentacao) tiposDeLojaContador[3]++;
+                    if(this.lojas[x] instanceof Informatica) tiposDeLojaContador[4]++;
+                }
+                return tiposDeLojaContador[posicaoDoTipoLoja];
+            }
+        }
+        return -1;
+    }
+
 }

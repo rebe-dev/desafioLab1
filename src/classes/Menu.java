@@ -14,7 +14,8 @@ public class Menu {
         String nomeLoja = Teclado.leString("\nNome da Loja:");
         int quantidaDeFuncionarios = Teclado.leInt("Quantidade de funcionarios:");
         double salarioBaseFuncionario = Teclado.leDouble("Qual o salario base dos funcionarios:");
-        
+        int quantMaximaProdutos = Teclado.leInt("Quantidade maxima de produtos:");
+
         System.out.println("Qual o endereço da loja?");
         String nomeDaRua = Teclado.leString("Rua:");
         String cidade = Teclado.leString("Cidade:");
@@ -31,7 +32,7 @@ public class Menu {
         int ano = Teclado.leInt("Ano:");
         Data dataDeFundacaoNovaLoja = new Data(dia, mes, ano);
 
-        Loja novaLoja = new Loja(nomeLoja, quantidaDeFuncionarios, salarioBaseFuncionario, enderecoLojaNova, dataDeFundacaoNovaLoja);
+        Loja novaLoja = new Loja(nomeLoja, quantidaDeFuncionarios, salarioBaseFuncionario, enderecoLojaNova, dataDeFundacaoNovaLoja, quantMaximaProdutos);
         System.out.println("\nLoja criada!\n" + novaLoja);
     }
 
