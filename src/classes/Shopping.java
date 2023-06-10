@@ -1,5 +1,4 @@
 package classes;
-import java.sql.Types;
 import java.util.Arrays;
 import classes.lojas.*;
 
@@ -74,7 +73,7 @@ public class Shopping {
 
         for(int i = 0; i < this.lojas.length; i++) {
             if(this.lojas[i] instanceof Informatica){
-                if(lojaComSeguroMaisCaro.getSeguroEletronicos() > ((Informatica)this.lojas[i]).getSeguroEletronicos()) {
+                if(lojaComSeguroMaisCaro.getSeguroEletronicos() < ((Informatica)this.lojas[i]).getSeguroEletronicos()) {
                     lojaComSeguroMaisCaro = ((Informatica)this.lojas[i]);
                 };
             }
