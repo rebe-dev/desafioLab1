@@ -3,18 +3,19 @@ package classes;
 public class Menu {
     int opcaoEscolhida;
    
-    public Menu(int opcaoEscolhida){
+    public Menu(int opcaoEscolhida) {
         this.opcaoEscolhida = opcaoEscolhida;
 
         if(this.opcaoEscolhida == 1) this.novaLoja();
         else this.novoProduto();
     }
 
-    private void novaLoja(){
+    private void novaLoja() {
         String nomeLoja = Teclado.leString("\nNome da Loja:");
         int quantidaDeFuncionarios = Teclado.leInt("Quantidade de funcionarios:");
         double salarioBaseFuncionario = Teclado.leDouble("Qual o salario base dos funcionarios:");
-        
+        int quantMaximaProdutos = Teclado.leInt("Quantidade maxima de produtos:");
+
         System.out.println("Qual o endereço da loja?");
         String nomeDaRua = Teclado.leString("Rua:");
         String cidade = Teclado.leString("Cidade:");
@@ -31,11 +32,11 @@ public class Menu {
         int ano = Teclado.leInt("Ano:");
         Data dataDeFundacaoNovaLoja = new Data(dia, mes, ano);
 
-        Loja novaLoja = new Loja(nomeLoja, quantidaDeFuncionarios, salarioBaseFuncionario, enderecoLojaNova, dataDeFundacaoNovaLoja);
+        Loja novaLoja = new Loja(nomeLoja, quantidaDeFuncionarios, salarioBaseFuncionario, enderecoLojaNova, dataDeFundacaoNovaLoja, quantMaximaProdutos);
         System.out.println("\nLoja criada!\n" + novaLoja);
     }
 
-    private void novoProduto(){
+    private void novoProduto() {
         String nomeProduto = Teclado.leString("\nNome do Produto:");
         Double preco = Teclado.leDouble("Preço do Produto:");
 

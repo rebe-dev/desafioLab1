@@ -4,7 +4,7 @@ public class Produto {
     double preco;
     Data dataValidade;
 
-    public Produto(String nome, double preco, Data dataValidade){
+    public Produto(String nome, double preco, Data dataValidade) {
         this.nome = nome;
         this.preco = preco;
         this.dataValidade = dataValidade;
@@ -31,17 +31,23 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
-    public String toString(){
+    public String toString() {
         return "O Produto" + this.nome + "possui o preço" + this.preco + "e data de validade " + this.dataValidade;
     };
 
-    public boolean estaVencido(Data data){
-        if(data.ano > this.dataValidade.ano){
+    public boolean estaVencido(Data data) {
+        if(data.ano > this.dataValidade.ano) {
             return true;
-        } else if(data.ano == this.dataValidade.ano && data.mes >= this.dataValidade.mes && data.dia >= this.dataValidade.dia){
+        } else if(data.ano == this.dataValidade.ano && data.mes >= this.dataValidade.mes && data.dia >= this.dataValidade.dia) {
             return true;
         } else{
             return false;
         }
+    }
+
+    public void removeProduto() {
+        this.setNome(null);
+        this.setDataValidade(null);
+        this.setPreco(0);
     }
 };
